@@ -1,0 +1,16 @@
+{
+"companyName": "Dinmo",
+"productName": "Dodge Ball: Random Infinity",
+"productVersion": "0.1",
+"dataUrl": "WebGL.data.unityweb",
+"wasmCodeUrl": "WebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#0D0D0D",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.17f1"
+}

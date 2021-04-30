@@ -22,24 +22,6 @@
       </div>
     </div>
 	<script>
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/dodgeball.unityloader.js";
-      var config = {
-        dataUrl: buildUrl + "/WebGL.data.data.unityweb",
-        frameworkUrl: buildUrl + "/dodgeball.framework.js.unityweb",
-        codeUrl: buildUrl + "/dodgeball.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Dinmo",
-        productName: "Dodge Ball: Random Infinity",
-        productVersion: "0.1",
-      };
-
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";

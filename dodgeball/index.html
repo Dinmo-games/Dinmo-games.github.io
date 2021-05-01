@@ -35,7 +35,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Dinmo",
         productName: "Dodge Ball: Random Infinity",
-        productVersion: "0.1",
+        productVersion: "1",
       };
 
       var container = document.querySelector("#unity-container");
@@ -62,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "80vw";
-        canvas.style.height = "80wh";
+        canvas.style.width = "600px";
+        canvas.style.height = "960px";
       }
       loadingBar.style.display = "block";
 
@@ -83,10 +83,5 @@
       };
       document.body.appendChild(script);
     </script>
-	
-	<script src="/dodgeball/vkBridge.js"></script>
-	<script>vkBridge.send('VKWebAppInit');</script>
-	<script src="/dodgeball/index.js"></script>
-	
   </body>
 </html>

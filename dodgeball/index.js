@@ -19,3 +19,5 @@ function ShowInviteBox() {
 		.then(data => console.log(data.success))
 		.catch(error => console.log(error));
 	}
+	
+	

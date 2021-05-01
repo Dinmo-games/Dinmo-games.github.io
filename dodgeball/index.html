@@ -87,5 +87,40 @@
 	<script src="/dodgeball/vkBridge.js"></script>
 	<script>vkBridge.send('VKWebAppInit');</script>
 	<script src="/dodgeball/index.js"></script>
+	
+	<script type="text/javascript" src="vk.com/js/api/xd_connection.js?2" charset="utf-8"></script>
+	<script type="text/javascript" src="ad.mail.ru/static/admanhtml/rbadman-html5.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="vk.com/js/api/adman_init.js" charset="utf-8"></script>
+<script>
+		window.addEventListener('load', function() {
+ 
+			var user_id = null;   // user's id
+			var app_id = 7840532;  // your app's id
+	
+			setTimeout(function () {
+				admanInit({
+					user_id: user_id,
+					app_id: 7840532,
+					type: 'preloader'         // 'preloader' or 'rewarded' (default - 'preloader')
+					// params: {preview: 1}   // to verify the correct operation of advertising
+					}, onAdsReady, onNoAds);
+				}, 2000); // wait 2s before showing ads in web
+	
+		function onAdsReady(adman) {
+			adman.onStarted(function () {});
+			adman.onCompleted(function() {
+		//to show pop up for adding game to left menu (favourites)
+			VK.callMethod('showSettingsBox', 256);
+			});          
+			adman.onSkipped(function() {
+			});          
+			adman.onClicked(function() {});
+			adman.start('preroll');
+		};
+		function onNoAds() {};
+	});
+</script>
+	
+	
   </body>
 </html>

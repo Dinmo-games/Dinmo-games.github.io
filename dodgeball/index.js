@@ -9,8 +9,8 @@ function ShowAds() {
 function ShowWallPostBox() {
 	//show pop up for adding post about app to player's wall on web/mobile
 	vkBridge.send("VKWebAppShowWallPostBox", {
-	"message": "Прыгай по столбикам и получай очки. Сможешь набрать больше всех?!",
-	"attachments": "https://vk.com/app7781392"  
+	"message": "Уворачивайся от красных шаров и атакующих кубов собирая монеты! Сможешь набрать больше всех?!",
+	"attachments": "https://vk.com/app7840532"  
 	});
 	}
 function ShowInviteBox() {

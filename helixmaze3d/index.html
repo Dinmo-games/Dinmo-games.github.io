@@ -97,8 +97,8 @@
   <script>
     function showVKAdv() {
       vkBridge.send("VKWebAppShowNativeAds", { ad_format: "interstitial" })
-        .then(данные => console.log(data.result))
-        .catch(ошибка => console.log(ошибка));
+        .then(data => console.log(data.result))
+		.catch(error => console.log(error));
     }
   </script>
 

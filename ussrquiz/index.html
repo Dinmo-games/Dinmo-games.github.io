@@ -37,7 +37,7 @@
           console.log(data);
           var data_result = data;
 
-          unityI.SendMessage('VKSDK', 'Rewarded', Boolean(data));
+          unityI.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data));
           // unityInstance.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data));
           // unityInstance.SendMessage('VKSDK', 'Rewarded', data);
         })

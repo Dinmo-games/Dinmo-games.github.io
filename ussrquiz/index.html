@@ -29,7 +29,7 @@
     function showRewardedAd() {
       vkBridge.send('VKWebAppShowNativeAds', { ad_format: "reward" }).then(data => {
         console.log(data);
-        unityI.SendMessage('VKSDK', 'Rewarded', data);
+        unityI.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data));
       })
     }
 

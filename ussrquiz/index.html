@@ -11,6 +11,7 @@
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
+
 </head>
 
 <body class="dark">
@@ -20,18 +21,27 @@
     vkBridge.send('VKWebAppInit');
 
     function showFullscrenAd() {
-      vkBridge.send('VKWebAppShowNativeAds', { ad_format: "interstitial" }).then(data => {
-        console.log(data);
-      });
+      vkBridge.send('VKWebAppShowNativeAds',
+        {
+          ad_format: "interstitial"
+        }).then(data => {
+          console.log(data);
+        });
     }
 
     function showRewardedAd() {
-      vkBridge.send('VKWebAppShowNativeAds', { ad_format: "reward" }).then(data => {
-        console.log(data);
-        unityI.SendMessage('VKSDK', 'Rewarded', String(data));
-      })
-    }
+      vkBridge.send('VKWebAppShowNativeAds',
+        {
+          ad_format: "reward"
+        }).then(data => {
+          console.log(data);
+          var data_result = data;
 
+          unityI.SendMessage('VKSDK', 'Rewarded', Boolean(data));
+          // unityInstance.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data));
+          // unityInstance.SendMessage('VKSDK', 'Rewarded', data);
+        })
+    }
 
   </script>
 
@@ -52,11 +62,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/USSR Quiz_VK_Rek_Test.loader.js";
+    const loaderUrl = buildUrl + "/USSR Quiz_VK_Rek_Test2.loader.js";
     const config = {
-      dataUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.data.unityweb",
-      frameworkUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.framework.js.unityweb",
-      codeUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.wasm.unityweb",
+      dataUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.data.unityweb",
+      frameworkUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.framework.js.unityweb",
+      codeUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinno-Games",
       productName: "USSR Quiz",
@@ -90,7 +100,7 @@
       container.className = "unity-mobile";
       config.devicePixelRatio = 1;
     }
-    canvas.style.background = "url('" + buildUrl + "/USSR Quiz_VK_Rek_Test.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/USSR Quiz_VK_Rek_Test2.jpg') center / cover";
     loadingCover.style.display = "";
 
     const script = document.createElement("script");
@@ -100,7 +110,8 @@
       createUnityInstance(canvas, config, (progress) => {
         spinner.style.display = "none";
         progressBarEmpty.style.display = "";
-        progressBarFull.style.width = `${100 * progress}%`;
+        progressBarFull.style.width = `${100 * progress
+          }%`;
       }).then((unityInstance) => {
         unityI = unityInstance;
         loadingCover.style.display = "none";

@@ -11,6 +11,7 @@
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
+
 </head>
 
 <body class="dark">
@@ -27,12 +28,10 @@
 
     function showRewardedAd() {
       vkBridge.send('VKWebAppShowNativeAds', { ad_format: "reward" }).then(data => {
-        console.log(data.result);
-        unityI.SendMessage('VKSDK', 'Rewarded', data.result);
-        unityInstance.SendMessage('VKSDK', 'Rewarded', data.result);
+        console.log(data);
+        unityI.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data.result));
       })
     }
-
 
   </script>
 
@@ -53,11 +52,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/USSR Quiz_VK_Rek_Test.loader.js";
+    const loaderUrl = buildUrl + "/USSR Quiz_VK_Rek_Test2.loader.js";
     const config = {
-      dataUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.data.unityweb",
-      frameworkUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.framework.js.unityweb",
-      codeUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.wasm.unityweb",
+      dataUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.data.unityweb",
+      frameworkUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.framework.js.unityweb",
+      codeUrl: buildUrl + "/USSR Quiz_VK_Rek_Test2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinno-Games",
       productName: "USSR Quiz",
@@ -91,7 +90,7 @@
       container.className = "unity-mobile";
       config.devicePixelRatio = 1;
     }
-    canvas.style.background = "url('" + buildUrl + "/USSR Quiz_VK_Rek_Test.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/USSR Quiz_VK_Rek_Test2.jpg') center / cover";
     loadingCover.style.display = "";
 
     const script = document.createElement("script");

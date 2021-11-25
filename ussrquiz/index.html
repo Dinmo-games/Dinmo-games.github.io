@@ -11,6 +11,7 @@
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
+
 </head>
 
 <body class="dark">
@@ -59,7 +60,6 @@
 
   </script>
 
-
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas"></canvas>
   </div>
@@ -76,11 +76,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/USSR_Quiz_VK.loader.js";
+    const loaderUrl = buildUrl + "/USSR_Quiz_VK_v2.loader.js";
     const config = {
-      dataUrl: buildUrl + "/USSR_Quiz_VK.data.unityweb",
-      frameworkUrl: buildUrl + "/USSR_Quiz_VK.framework.js.unityweb",
-      codeUrl: buildUrl + "/USSR_Quiz_VK.wasm.unityweb",
+      dataUrl: buildUrl + "/USSR_Quiz_VK_v2.data.unityweb",
+      frameworkUrl: buildUrl + "/USSR_Quiz_VK_v2.framework.js.unityweb",
+      codeUrl: buildUrl + "/USSR_Quiz_VK_v2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinno-Games",
       productName: "USSR Quiz",
@@ -114,7 +114,7 @@
       container.className = "unity-mobile";
       config.devicePixelRatio = 1;
     }
-    canvas.style.background = "url('" + buildUrl + "/USSR_Quiz_VK.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/USSR_Quiz_VK_v2.jpg') center / cover";
     loadingCover.style.display = "";
 
     const script = document.createElement("script");

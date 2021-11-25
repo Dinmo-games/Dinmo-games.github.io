@@ -26,13 +26,36 @@
     }
 
     function showRewardedAd() {
-      vkBridge.send('VKWebAppShowNativeAds', { ad_format: "reward" }).then(data => {
-        console.log(data);
-        unityI.SendMessage('YandexSDK', 'Rewarded', JSON.stringify(data.result));
-        // unityI.SendMessage('VKSDK', 'Rewarded', toString(data.result));
-      })
+      vkBridge.send('VKWebAppShowNativeAds', { ad_format: "reward" })
+        .then(data => {
+          console.log(data);
+          unityI.SendMessage('VKSDK', 'Rewarded', JSON.stringify(data.result));
+        })
     }
 
+    function showInviteBox() {
+      //show pop up for inviting friends to app on web/mobile
+      vkBridge.send("VKWebAppShowInviteBox", {})
+        .then(data => {
+          console.log(data.success)
+          // unityI.SendMessage('VKSDK', 'Invited', JSON.stringify(data.success)) // Можно давать награду за приглашение
+        })
+        .catch(error => console.log(error));
+    }
+
+    function showWallPostBox() {
+      //show pop up for adding post about app to player's wall on web/mobile
+      // Изменять текст в зависимости от игры
+      vkBridge.send("VKWebAppShowWallPostBox", {
+        "message": "Уворачивайся от красных шаров и атакующих кубов собирая монеты! Сможешь набрать больше всех?!",
+        "attachments": "https://vk.com/app7840532"
+      });
+    }
+
+    function showAppAddToFavoritesBox() {
+      //show pop up for adding app to favorites on web/mobile
+      vkBridge.send("VKWebAppAddToFavorites");
+    }
 
   </script>
 
@@ -53,11 +76,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/USSR Quiz_VK_Rek_Test.loader.js";
+    const loaderUrl = buildUrl + "/USSR_Quiz_VK.loader.js";
     const config = {
-      dataUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.data.unityweb",
-      frameworkUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.framework.js.unityweb",
-      codeUrl: buildUrl + "/USSR Quiz_VK_Rek_Test.wasm.unityweb",
+      dataUrl: buildUrl + "/USSR_Quiz_VK.data.unityweb",
+      frameworkUrl: buildUrl + "/USSR_Quiz_VK.framework.js.unityweb",
+      codeUrl: buildUrl + "/USSR_Quiz_VK.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinno-Games",
       productName: "USSR Quiz",
@@ -91,7 +114,7 @@
       container.className = "unity-mobile";
       config.devicePixelRatio = 1;
     }
-    canvas.style.background = "url('" + buildUrl + "/USSR Quiz_VK_Rek_Test.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/USSR_Quiz_VK.jpg') center / cover";
     loadingCover.style.display = "";
 
     const script = document.createElement("script");

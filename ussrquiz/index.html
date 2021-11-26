@@ -11,7 +11,6 @@
 
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
-
 </head>
 
 <body class="dark">
@@ -48,8 +47,8 @@
       //show pop up for adding post about app to player's wall on web/mobile
       // Изменять текст в зависимости от игры
       vkBridge.send("VKWebAppShowWallPostBox", {
-        "message": "Викторина о временах СССР, в периоды прекрасного детства и бесшабашной юности. ☭ \n \n @dinmo.games (Dinmo-Games) - Много игр как для телефона так и для компьютера \n\n #vkgames  #directgames  #dinmogames  #ссср",
-        "attachments": "https://vk.com/app8008824"
+        "message": " Основной текст писать тут    \n\n @dinmo.games (Dinmo-Games) - Много игр как для телефона так и для компьютера  \n\n #vkgames  #directgames  #dinmogames",
+        "attachments": "https://vk.com/app8008824" // Изменять ссылка на игру
       });
     }
 
@@ -59,6 +58,7 @@
     }
 
   </script>
+
 
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas"></canvas>
@@ -76,12 +76,12 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/USSR_Quiz_VK_v2.loader.js";
+    const loaderUrl = buildUrl + "/USSR_Quiz_VK_v3.loader.js";
     const config = {
-      dataUrl: buildUrl + "/USSR_Quiz_VK_v2.data.unityweb",
-      frameworkUrl: buildUrl + "/USSR_Quiz_VK_v2.framework.js.unityweb",
-      codeUrl: buildUrl + "/USSR_Quiz_VK_v2.wasm.unityweb",
-      streamingAssetsUrl: "StreamingAssets",
+      dataUrl: buildUrl + "/USSR_Quiz_VK_v3.data.unityweb",
+      frameworkUrl: buildUrl + "/USSR_Quiz_VK_v3.framework.js.unityweb",
+      codeUrl: buildUrl + "/USSR_Quiz_VK_v3.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinno-Games",
       productName: "USSR Quiz",
       productVersion: "1.0",
@@ -114,7 +114,7 @@
       container.className = "unity-mobile";
       config.devicePixelRatio = 1;
     }
-    canvas.style.background = "url('" + buildUrl + "/USSR_Quiz_VK_v2.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/USSR_Quiz_VK_v3.jpg') center / cover";
     loadingCover.style.display = "";
 
     const script = document.createElement("script");

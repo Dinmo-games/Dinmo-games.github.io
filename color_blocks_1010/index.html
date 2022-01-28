@@ -31,10 +31,7 @@
 
       await _unityAwaiter.ready;
 
-      // VK STICKY
-      if (mobile == true) {
         gs.ads.showSticky();
-      }
 
       window.GameScore = new GameScoreUnity(gs, unityI);
     };
@@ -94,16 +91,9 @@
       return false;
     }());
 
-    var mobile = null;
-
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       container.className = "unity-mobile";
-      mobile = true;
     }
-    else {
-      mobile = false;
-    }
-
 
     loadingCover.style.display = "";
 

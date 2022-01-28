@@ -10,12 +10,23 @@
   <link rel="stylesheet" href="TemplateData/style.css">
   <script src="TemplateData/gamescore-unity.js"></script>
 
+  <!-- Yandex.RTB -->
+  <script>window.yaContextCb = window.yaContextCb || []</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
+
+  <!-- >>> replace with your gamescore load script here <<< -->
+  <!-- 1010 -->
+  <script async
+    src="https://gs.eponesh.com/sdk/game-score.js?projectId=846&publicToken=Q6WbtRv8z89LKwp1J3EEnKDVam5tHdNz&callback=onGSInit"></script>
+
   <script>
+    var GameScore = null;
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
+
     window.onGSInit = async (gs) => {
 
       await _unityAwaiter.ready;
@@ -27,12 +38,8 @@
 
       window.GameScore = new GameScoreUnity(gs, unityI);
     };
-  </script>
 
-  <!-- >>> replace with your gamescore load script here <<< -->
-  <!-- POWER PUZZLE -->
-  <script async
-    src="https://gs.eponesh.com/sdk/game-score.js?projectId=743&publicToken=KC9ZhRrQuwqtkhg2DnxU98Zx35G3Vs6z&callback=onGSInit"></script>
+  </script>
 
 </head>
 
@@ -53,11 +60,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/Power Puzzle.loader.js";
+    const loaderUrl = buildUrl + "/1010.loader.js";
     const config = {
-      dataUrl: buildUrl + "/Power Puzzle.data.unityweb",
-      frameworkUrl: buildUrl + "/Power Puzzle.framework.js.unityweb",
-      codeUrl: buildUrl + "/Power Puzzle.wasm.unityweb",
+      dataUrl: buildUrl + "/1010.data.unityweb",
+      frameworkUrl: buildUrl + "/1010.framework.js.unityweb",
+      codeUrl: buildUrl + "/1010.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Puzzles",
@@ -128,52 +135,52 @@
     document.body.appendChild(script);
 
     function Hit() {
-      ym(87075435, 'hit', "#+1_money", { title: "+1 Монета" })
+      ym(87298659, 'hit', "#+1_money", { title: "+1 Монета" })
     }
 
     function ReachGoal(value) {
       //Изменять индекс для каждой игры - ЯНДЕКС МЕТРИКА
 
       if (value == "close_tutorial") {
-        ym(87075435, 'reachGoal', 'close_tutorial')
+        ym(87298659, 'reachGoal', 'close_tutorial')
       }
       else {
 
         switch (Number(value)) {
           case 10:
-            ym(87075435, 'reachGoal', 'score_10');
+            ym(87298659, 'reachGoal', 'score_10');
             break;
 
           case 50:
-            ym(87075435, 'reachGoal', 'score_50')
+            ym(87298659, 'reachGoal', 'score_50')
             break;
 
           case 100:
-            ym(87075435, 'reachGoal', 'score_100')
+            ym(87298659, 'reachGoal', 'score_100')
             break;
 
           case 300:
-            ym(87075435, 'reachGoal', 'score_300')
+            ym(87298659, 'reachGoal', 'score_300')
             break;
 
           case 500:
-            ym(87075435, 'reachGoal', 'score_500')
+            ym(87298659, 'reachGoal', 'score_500')
             break;
 
           case 1000:
-            ym(87075435, 'reachGoal', 'score_1000')
+            ym(87298659, 'reachGoal', 'score_1000')
             break;
 
           case 2000:
-            ym(87075435, 'reachGoal', 'score_2000')
+            ym(87298659, 'reachGoal', 'score_2000')
             break;
 
           case 5000:
-            ym(87075435, 'reachGoal', 'score_5000')
+            ym(87298659, 'reachGoal', 'score_5000')
             break;
 
           case 10000:
-            ym(87075435, 'reachGoal', 'score_10000')
+            ym(87298659, 'reachGoal', 'score_10000')
             break;
         }
       }
@@ -194,7 +201,7 @@
     })
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(87075435, "init", {
+    ym(87298659, "init", {
       clickmap: true,
       trackLinks: true,
       accurateTrackBounce: true,
@@ -202,7 +209,7 @@
     });
   </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/87075435" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div><img src="https://mc.yandex.ru/watch/87298659" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript>
   <!-- /Yandex.Metrika counter -->
 

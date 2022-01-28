@@ -30,9 +30,9 @@
   </script>
 
   <!-- >>> replace with your gamescore load script here <<< -->
-  <!-- POWER PUZZLE -->
+  <!-- Make 10 -->
   <script async
-    src="https://gs.eponesh.com/sdk/game-score.js?projectId=743&publicToken=KC9ZhRrQuwqtkhg2DnxU98Zx35G3Vs6z&callback=onGSInit"></script>
+    src="https://gs.eponesh.com/sdk/game-score.js?projectId=859&publicToken=9hPy3BPKxKz6qXxXIIyoaFfQJfOoMLR3&callback=onGSInit"></script>
 
 </head>
 
@@ -53,11 +53,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/Power Puzzle.loader.js";
+    const loaderUrl = buildUrl + "/Make10.loader.js";
     const config = {
-      dataUrl: buildUrl + "/Power Puzzle.data.unityweb",
-      frameworkUrl: buildUrl + "/Power Puzzle.framework.js.unityweb",
-      codeUrl: buildUrl + "/Power Puzzle.wasm.unityweb",
+      dataUrl: buildUrl + "/Make10.data.unityweb",
+      frameworkUrl: buildUrl + "/Make10.framework.js.unityweb",
+      codeUrl: buildUrl + "/Make10.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Puzzles",
@@ -128,52 +128,52 @@
     document.body.appendChild(script);
 
     function Hit() {
-      ym(87075435, 'hit', "#+1_money", { title: "+1 Монета" })
+      ym(87298699, 'hit', "#+1_money", { title: "+1 Монета" })
     }
 
     function ReachGoal(value) {
       //Изменять индекс для каждой игры - ЯНДЕКС МЕТРИКА
 
       if (value == "close_tutorial") {
-        ym(87075435, 'reachGoal', 'close_tutorial')
+        ym(87298699, 'reachGoal', 'close_tutorial')
       }
       else {
 
         switch (Number(value)) {
           case 10:
-            ym(87075435, 'reachGoal', 'score_10');
+            ym(87298699, 'reachGoal', 'score_10');
             break;
 
           case 50:
-            ym(87075435, 'reachGoal', 'score_50')
+            ym(87298699, 'reachGoal', 'score_50')
             break;
 
           case 100:
-            ym(87075435, 'reachGoal', 'score_100')
+            ym(87298699, 'reachGoal', 'score_100')
             break;
 
           case 300:
-            ym(87075435, 'reachGoal', 'score_300')
+            ym(87298699, 'reachGoal', 'score_300')
             break;
 
           case 500:
-            ym(87075435, 'reachGoal', 'score_500')
+            ym(87298699, 'reachGoal', 'score_500')
             break;
 
           case 1000:
-            ym(87075435, 'reachGoal', 'score_1000')
+            ym(87298699, 'reachGoal', 'score_1000')
             break;
 
           case 2000:
-            ym(87075435, 'reachGoal', 'score_2000')
+            ym(87298699, 'reachGoal', 'score_2000')
             break;
 
           case 5000:
-            ym(87075435, 'reachGoal', 'score_5000')
+            ym(87298699, 'reachGoal', 'score_5000')
             break;
 
           case 10000:
-            ym(87075435, 'reachGoal', 'score_10000')
+            ym(87298699, 'reachGoal', 'score_10000')
             break;
         }
       }
@@ -194,7 +194,7 @@
     })
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(87075435, "init", {
+    ym(87298699, "init", {
       clickmap: true,
       trackLinks: true,
       accurateTrackBounce: true,
@@ -202,7 +202,7 @@
     });
   </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/87075435" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div><img src="https://mc.yandex.ru/watch/87298699" style="position:absolute; left:-9999px;" alt="" /></div>
   </noscript>
   <!-- /Yandex.Metrika counter -->
 

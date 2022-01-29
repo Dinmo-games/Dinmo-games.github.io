@@ -117,6 +117,21 @@
     };
     document.body.appendChild(script);
 
+    
+       window.addEventListener("touchstart", () => {
+      container.focus();
+      window.focus();
+      canvas.focus();
+      console.log("Click - Touch");
+    });
+
+    window.addEventListener("pointerdown", () => {
+      container.focus();
+      window.focus();
+      canvas.focus();
+      console.log("pointer down");
+    });
+    
     function Hit() {
       ym(87298712, 'hit', "#+1_money", { title: "+1 Монета" })
     }

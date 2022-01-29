@@ -10,17 +10,12 @@
   <link rel="stylesheet" href="TemplateData/style.css">
   <script src="TemplateData/gamescore-unity.js"></script>
 
-  <!-- Yandex.RTB -->
-  <script>window.yaContextCb = window.yaContextCb || []</script>
-  <script src="https://yandex.ru/ads/system/context.js" async></script>
-
   <!-- >>> replace with your gamescore load script here <<< -->
   <!-- 1010 -->
   <script async
     src="https://gs.eponesh.com/sdk/game-score.js?projectId=846&publicToken=Q6WbtRv8z89LKwp1J3EEnKDVam5tHdNz&callback=onGSInit"></script>
 
   <script>
-    var GameScore = null;
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
       _unityAwaiter.done = resolve;
@@ -124,6 +119,20 @@
     };
     document.body.appendChild(script);
 
+       window.addEventListener("touchstart", () => {
+      container.focus();
+      window.focus();
+      canvas.focus();
+      console.log("Click - Touch");
+    });
+
+    window.addEventListener("pointerdown", () => {
+      container.focus();
+      window.focus();
+      canvas.focus();
+      console.log("pointer down");
+    });
+    
     function Hit() {
       ym(87298659, 'hit', "#+1_money", { title: "+1 Монета" })
     }

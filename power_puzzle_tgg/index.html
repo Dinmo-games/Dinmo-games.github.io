@@ -9,20 +9,16 @@
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
 
-
-  <!-- <script src="https://cdn.tg.games/sdk/v1.0.0.js"></script> -->
-
   <script>
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
+
   </script>
 
 </head>
-
-
 
 <body class="light">
 
@@ -77,9 +73,7 @@
       //   })
     }
     function playerGetGameData() {
-//       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
-            unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{"coins":60,"purchasedItems":[],"purchaseInProgress":[],"currentGameId":"PowerPuzzle"}');
-      
+      unityI.SendMessage('Web', 'CallPlayerGameDataComplite', {});
       // tggsdk.getGameData()
       //   .then((gameData) => {
       //     if (gameData == null) {
@@ -123,10 +117,10 @@
 
 
 
-    // tggsdk.hideBanner()
-    //   .then((result) => {
-    //     console.log('Hide banner result:', result)
-    //   })
+      // tggsdk.hideBanner()
+      //   .then((result) => {
+      //     console.log('Hide banner result:', result)
+      //   })
 
   </script>
 
@@ -147,11 +141,11 @@
   <script>
     const hideFullScreenButton = "1";
     const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/Power Puzzle.loader.js";
+    const loaderUrl = buildUrl + "/Power Puzzle TGG.loader.js";
     const config = {
-      dataUrl: buildUrl + "/Power Puzzle.data.unityweb",
-      frameworkUrl: buildUrl + "/Power Puzzle.framework.js.unityweb",
-      codeUrl: buildUrl + "/Power Puzzle.wasm.unityweb",
+      dataUrl: buildUrl + "/Power Puzzle TGG.data.unityweb",
+      frameworkUrl: buildUrl + "/Power Puzzle TGG.framework.js.unityweb",
+      codeUrl: buildUrl + "/Power Puzzle TGG.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Dinmo Games",
       productName: "Puzzle",
@@ -204,8 +198,6 @@
       }).then((unityInstance) => {
         _unityAwaiter.done(unityInstance);
         unityI = unityInstance;
-        console.log("UnityI: " + unityI);
-        console.log("Unity Instance: " + unityInstance);
         loadingCover.style.display = "none";
         if (canFullscreen) {
           if (!hideFullScreenButton) {

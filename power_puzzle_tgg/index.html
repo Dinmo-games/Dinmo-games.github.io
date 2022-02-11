@@ -18,17 +18,6 @@
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
-
-
-
-
-
-
-    // tggsdk.showBanner()
-    //   .then((result) => {
-    //     console.log('Show banner result:', result)
-    //   })
-
   </script>
 
 </head>
@@ -65,7 +54,16 @@
 
       await _unityAwaiter.ready;
       // Once SDK is initialized, you can use these functions
-      unityI.SendMessage('Web', 'CallPlayerAuthError');
+
+      // unityI.SendMessage('Web', 'CallPlayerAuthError');
+      unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+
+      // tggsdk.showBanner()
+      //   .then((result) => {
+      //     console.log('Show banner result:', result)
+      //   })
+
+
       // tggsdk
       //   .getPlayerData()
       //   .then((playerData) => {
@@ -79,19 +77,27 @@
       //   })
     }
     function playerGetGameData() {
-      tggsdk.getGameData()
-        .then((gameData) => {
-          unityI.SendMessage('Web', 'CallPlayerGameDataComplite', gameData)
-          console.log('Game data:', gameData)
-        })
+      unityI.SendMessage('Web', 'CallPlayerGameDataComplite', {});
+      // tggsdk.getGameData()
+      //   .then((gameData) => {
+      //     if (gameData == null) {
+      //       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', {});
+      //     }
+      //     else {
+      //       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', gameData);
+
+      //     }
+
+      //     console.log('Game data:', gameData)
+      //   })
     }
 
     function playerSetGameData(value) {
       console.log("Player SET value: " + value);
-      tggsdk.setGameData({ key: value })
-        .then((result) => {
-          console.log('Set game data result:', result)
-        })
+      // tggsdk.setGameData({ key: value })
+      //   .then((result) => {
+      //     console.log('Set game data result:', result)
+      //   })
 
     }
 

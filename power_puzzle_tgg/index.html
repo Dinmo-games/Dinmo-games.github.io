@@ -21,7 +21,6 @@
 
 
 
-    await _unityAwaiter.ready;
 
 
 
@@ -62,7 +61,9 @@
     //   //     console.log('Player data:', playerData)
     //   //   })
     // }
-    function auth() {
+    async function auth() {
+
+      await _unityAwaiter.ready;
       // Once SDK is initialized, you can use these functions
       unityI.SendMessage('Web', 'CallPlayerAuthError');
       // tggsdk

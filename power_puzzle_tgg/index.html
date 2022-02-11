@@ -18,7 +18,22 @@
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
-
+    
+    function auth() {
+      // Once SDK is initialized, you can use these functions
+      unityI.SendMessage('Web', 'CallPlayerAuthError');
+      // tggsdk
+      //   .getPlayerData()
+      //   .then((playerData) => {
+      //     if (playerData != null) {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+      //     }
+      //     else {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
+      //     }
+      //     console.log('Player data:', playerData)
+      //   })
+    }
 
     await _unityAwaiter.ready;
 
@@ -46,21 +61,7 @@
     //   })
 
 
-    function auth() {
-      // Once SDK is initialized, you can use these functions
-      unityI.SendMessage('Web', 'CallPlayerAuthError');
-      // tggsdk
-      //   .getPlayerData()
-      //   .then((playerData) => {
-      //     if (playerData != null) {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-      //     }
-      //     else {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
-      //     }
-      //     console.log('Player data:', playerData)
-      //   })
-    }
+
 
     function playerGetGameData() {
       tggsdk.getGameData()

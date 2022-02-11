@@ -13,29 +13,15 @@
   <!-- <script src="https://cdn.tg.games/sdk/v1.0.0.js"></script> -->
 
   <script>
-//     var _unityAwaiter = {};
-//     _unityAwaiter.ready = new Promise((resolve, reject) => {
-//       _unityAwaiter.done = resolve;
-//       _unityAwaiter.abort = reject;
-//     });
-    
-//     function auth() {
-      // Once SDK is initialized, you can use these functions
-      
-      // tggsdk
-      //   .getPlayerData()
-      //   .then((playerData) => {
-      //     if (playerData != null) {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-      //     }
-      //     else {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
-      //     }
-      //     console.log('Player data:', playerData)
-      //   })
-//     }
+    var _unityAwaiter = {};
+    _unityAwaiter.ready = new Promise((resolve, reject) => {
+      _unityAwaiter.done = resolve;
+      _unityAwaiter.abort = reject;
+    });
 
-//     await _unityAwaiter.ready;
+
+
+    await _unityAwaiter.ready;
 
 
 
@@ -61,11 +47,36 @@
     //   })
 
 
+    // function auth() {
+    //   // Once SDK is initialized, you can use these functions
+    //   unityI.SendMessage('Web', 'CallPlayerAuthError');
+    //   // tggsdk
+    //   //   .getPlayerData()
+    //   //   .then((playerData) => {
+    //   //     if (playerData != null) {
+    //   //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+    //   //     }
+    //   //     else {
+    //   //       unityI.SendMessage('Web', 'CallPlayerAuthError');
+    //   //     }
+    //   //     console.log('Player data:', playerData)
+    //   //   })
+    // }
     function auth() {
-      console.log("Auth");
+      // Once SDK is initialized, you can use these functions
       unityI.SendMessage('Web', 'CallPlayerAuthError');
+      // tggsdk
+      //   .getPlayerData()
+      //   .then((playerData) => {
+      //     if (playerData != null) {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+      //     }
+      //     else {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
+      //     }
+      //     console.log('Player data:', playerData)
+      //   })
     }
-
     function playerGetGameData() {
       tggsdk.getGameData()
         .then((gameData) => {
@@ -182,10 +193,10 @@
         progressBarEmpty.style.display = "";
         progressBarFull.style.width = `${100 * progress}%`;
       }).then((unityInstance) => {
-//         _unityAwaiter.done(unityInstance);
+        _unityAwaiter.done(unityInstance);
         unityI = unityInstance;
         console.log("UnityI: " + unityI);
-         console.log("Unity Instance: " + unityInstance);
+        console.log("Unity Instance: " + unityInstance);
         loadingCover.style.display = "none";
         if (canFullscreen) {
           if (!hideFullScreenButton) {
@@ -196,7 +207,7 @@
           };
         }
       }).catch((message) => {
-//         _unityAwaiter.abort(message);
+        _unityAwaiter.abort(message);
         alert(message);
       });
     };

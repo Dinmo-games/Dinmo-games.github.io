@@ -9,6 +9,9 @@
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
 
+
+  <!-- <script src="https://cdn.tg.games/sdk/v1.0.0.js"></script> -->
+
   <script>
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
@@ -17,25 +20,46 @@
     });
 
 
-    tggsdk.initialize()
-      .then(() => {
-        // SDK ready
-      })
+    await _unityAwaiter.ready;
+
+
+
+    // tggsdk.showBanner()
+    //   .then((result) => {
+    //     console.log('Show banner result:', result)
+    //   })
+
+  </script>
+
+</head>
+
+
+
+<body class="light">
+
+  <script>
+
+
+    // tggsdk.initialize()
+    //   .then(() => {
+    //     // SDK ready
+    //   })
 
 
     function auth() {
       // Once SDK is initialized, you can use these functions
-      tggsdk
-        .getPlayerData()
-        .then((playerData) => {
-          if (playerData != null) {
-            unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-          }
-          else {
-            unityI.SendMessage('Web', 'CallPlayerAuthError');
-          }
-          console.log('Player data:', playerData)
-        })
+      unityI.SendMessage('Web', 'CallPlayerAuthError');
+      // tggsdk
+      //   .getPlayerData()
+      //   .then((playerData) => {
+      //     if (playerData != null) {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+      //     }
+      //     else {
+      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
+      //     }
+      //     console.log('Player data:', playerData)
+      //   })
     }
 
     function playerGetGameData() {
@@ -72,12 +96,7 @@
     }
 
 
-    await _unityAwaiter.ready;
 
-    tggsdk.showBanner()
-      .then((result) => {
-        console.log('Show banner result:', result)
-      })
 
 
     // tggsdk.hideBanner()
@@ -85,14 +104,9 @@
     //     console.log('Hide banner result:', result)
     //   })
 
-
-
-
   </script>
 
-</head>
 
-<body class="light">
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas"></canvas>
   </div>

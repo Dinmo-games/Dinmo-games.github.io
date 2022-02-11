@@ -77,7 +77,9 @@
       //   })
     }
     function playerGetGameData() {
-      unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
+//       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
+            unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{"coins":1,"purchasedItems":[],"purchaseInProgress":[],"currentGameId":"PowerPuzzle"}');
+      
       // tggsdk.getGameData()
       //   .then((gameData) => {
       //     if (gameData == null) {

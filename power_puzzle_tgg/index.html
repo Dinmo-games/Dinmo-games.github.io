@@ -13,11 +13,11 @@
   <!-- <script src="https://cdn.tg.games/sdk/v1.0.0.js"></script> -->
 
   <script>
-    var _unityAwaiter = {};
-    _unityAwaiter.ready = new Promise((resolve, reject) => {
-      _unityAwaiter.done = resolve;
-      _unityAwaiter.abort = reject;
-    });
+//     var _unityAwaiter = {};
+//     _unityAwaiter.ready = new Promise((resolve, reject) => {
+//       _unityAwaiter.done = resolve;
+//       _unityAwaiter.abort = reject;
+//     });
     
     function auth() {
       // Once SDK is initialized, you can use these functions
@@ -179,7 +179,7 @@
         progressBarEmpty.style.display = "";
         progressBarFull.style.width = `${100 * progress}%`;
       }).then((unityInstance) => {
-        _unityAwaiter.done(unityInstance);
+//         _unityAwaiter.done(unityInstance);
         unityI = unityInstance;
         loadingCover.style.display = "none";
         if (canFullscreen) {
@@ -191,7 +191,7 @@
           };
         }
       }).catch((message) => {
-        _unityAwaiter.abort(message);
+//         _unityAwaiter.abort(message);
         alert(message);
       });
     };

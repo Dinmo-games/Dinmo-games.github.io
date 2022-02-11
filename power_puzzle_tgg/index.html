@@ -19,9 +19,9 @@
 //       _unityAwaiter.abort = reject;
 //     });
     
-    function auth() {
+//     function auth() {
       // Once SDK is initialized, you can use these functions
-      unityI.SendMessage('Web', 'CallPlayerAuthError');
+      
       // tggsdk
       //   .getPlayerData()
       //   .then((playerData) => {
@@ -33,7 +33,7 @@
       //     }
       //     console.log('Player data:', playerData)
       //   })
-    }
+//     }
 
 //     await _unityAwaiter.ready;
 
@@ -63,6 +63,7 @@
 
     function auth() {
       console.log("Auth");
+      unityI.SendMessage('Web', 'CallPlayerAuthError');
     }
 
     function playerGetGameData() {

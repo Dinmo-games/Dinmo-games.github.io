@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
 
+  <script src="https://cdn.tg.games/sdk/v1.0.0.js"></script>
+
   <script>
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
@@ -24,77 +26,54 @@
 
   <script>
 
+    tggsdk.initialize()
+      .then(() => {
+        // SDK ready
+      })
 
-    // tggsdk.initialize()
-    //   .then(() => {
-    //     // SDK ready
-    //   })
-
-
-    // function auth() {
-    //   // Once SDK is initialized, you can use these functions
-    //   unityI.SendMessage('Web', 'CallPlayerAuthError');
-    //   // tggsdk
-    //   //   .getPlayerData()
-    //   //   .then((playerData) => {
-    //   //     if (playerData != null) {
-    //   //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-    //   //     }
-    //   //     else {
-    //   //       unityI.SendMessage('Web', 'CallPlayerAuthError');
-    //   //     }
-    //   //     console.log('Player data:', playerData)
-    //   //   })
-    // }
     async function auth() {
 
       await _unityAwaiter.ready;
-      // Once SDK is initialized, you can use these functions
 
-      // unityI.SendMessage('Web', 'CallPlayerAuthError');
-      unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-
-      // tggsdk.showBanner()
-      //   .then((result) => {
-      //     console.log('Show banner result:', result)
-      //   })
+      tggsdk.showBanner()
+        .then((result) => {
+          console.log('Show banner result:', result)
+        })
 
 
-      // tggsdk
-      //   .getPlayerData()
-      //   .then((playerData) => {
-      //     if (playerData != null) {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthComplite');
-      //     }
-      //     else {
-      //       unityI.SendMessage('Web', 'CallPlayerAuthError');
-      //     }
-      //     console.log('Player data:', playerData)
-      //   })
+      tggsdk
+        .getPlayerData()
+        .then((playerData) => {
+          if (playerData != null) {
+            unityI.SendMessage('Web', 'CallPlayerAuthComplite');
+          }
+          else {
+            unityI.SendMessage('Web', 'CallPlayerAuthError');
+          }
+          console.log('Player data:', playerData)
+        })
     }
     function playerGetGameData() {
-      unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
-      // tggsdk.getGameData()
-      //   .then((gameData) => {
-      console.log("Player Game Data: " + gameData);
-      //     if (gameData == null) {
-      //       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', {});
-      //     }
-      //     else {
-      //       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', gameData);
 
-      //     }
+      tggsdk.getGameData()
+        .then((gameData) => {
+          if (gameData == null) {
+            unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
+          }
+          else {
+            unityI.SendMessage('Web', 'CallPlayerGameDataComplite', gameData);
 
-      //     console.log('Game data:', gameData)
-      //   })
+          }
+          console.log('Game data:', gameData)
+        })
     }
 
     function playerSetGameData(value) {
       console.log("Player SET value: " + value);
-      // tggsdk.setGameData({ key: value })
-      //   .then((result) => {
-      //     console.log('Set game data result:', result)
-      //   })
+      tggsdk.setGameData({ key: value })
+        .then((result) => {
+          console.log('Set game data result:', result)
+        })
 
     }
 
@@ -109,15 +88,10 @@
       //Узнать какие значения в result
       tggsdk.showRewarded()
         .then((result) => {
-        console.log("Reward result: " + result);
           console.log('Show rewarded result:', result)
         })
 
     }
-
-
-
-
 
       // tggsdk.hideBanner()
       //   .then((result) => {
@@ -216,8 +190,6 @@
     };
     document.body.appendChild(script);
 
-
-    //YANDEX
     window.addEventListener("touchstart", () => {
       container.focus();
       window.focus();
@@ -231,7 +203,6 @@
       canvas.focus();
       console.log("pointer down");
     });
-
 
   </script>
 

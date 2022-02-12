@@ -57,21 +57,23 @@
 
       tggsdk.getGameData()
         .then((gameData) => {
+        console.log("GET Game Data" + gameData);
           if (gameData == null) {
             unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
           }
           else {
+             console.log("ELSE FIRST TRY - GET Game Data" + gameData);
             unityI.SendMessage('Web', 'CallPlayerGameDataComplite', gameData);
-
           }
           console.log('Game data:', gameData)
         })
     }
 
     function playerSetGameData(value) {
-      console.log("Player SET value: " + value);
-      tggsdk.setGameData({ key: value })
+      console.log("Player SET value WEB: " + value);
+      tggsdk.setGameData({value})
         .then((result) => {
+         console.log("SET GAME DATA INTO - Result - Value" + value);
           console.log('Set game data result:', result)
         })
 

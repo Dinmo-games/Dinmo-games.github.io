@@ -76,6 +76,7 @@
       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', '{}');
       // tggsdk.getGameData()
       //   .then((gameData) => {
+      console.log("Player Game Data: " + gameData);
       //     if (gameData == null) {
       //       unityI.SendMessage('Web', 'CallPlayerGameDataComplite', {});
       //     }
@@ -108,6 +109,7 @@
       //Узнать какие значения в result
       tggsdk.showRewarded()
         .then((result) => {
+        console.log("Reward result: " + result);
           console.log('Show rewarded result:', result)
         })
 

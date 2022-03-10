@@ -120,11 +120,30 @@ body {
 }
 
 
-.sticky_bottom {
-    bottom: 0;
+.start-screen_background {
+    background-color: white;
+    z-index: 100;
 }
 
-.box-bottom-sticky {
+.button{
+    -webkit-appearance: none;
+			display: inline-block;
+			text-decoration: none;
+			cursor: pointer;
+			border: 0;
+			border-radius: 5px;
+			background: #d52349;
+			color: #fff !important;
+			font-weight: 700;
+			outline: 0;
+			-moz-transition: background-color .25s ease-in-out;
+			-webkit-transition: background-color .25s ease-in-out;
+			-o-transition: background-color .25s ease-in-out;
+			-ms-transition: background-color .25s ease-in-out;
+			transition: background-color .25s ease-in-out;
+}
+
+/* .box-bottom-sticky {
     width: 100%;
 }
 
@@ -136,4 +155,88 @@ body {
 
     z-index: 100;
     overflow: hidden;
+} */
+
+
+/* 
+.sticky__bottom {
+    bottom: 0;
 }
+
+.sticky__top{
+    top: 0;
+}
+
+.sticky__left{
+ left: 0;
+}
+
+.sticky__right{
+ right: 0;
+}
+
+.sticky__desktop {
+
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 430px;
+    max-width: 970px;
+
+    height: 90px;
+    max-height: 90px;
+
+    overflow: hidden;
+    z-index: 100;
+}
+
+.sticky__mobile {
+
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    max-height: 90px;
+    height: 90px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.sticky_mini__mobile {
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    max-height: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.sticky_mini_full__mobile{
+    position: fixed;
+    left:0;
+    bottom:0;
+    height:50px;
+    max-height:50px;
+    width:100%
+}
+
+.sticky-sides-desktop{
+    position:absolute;
+    width:250px;
+    height:500px;
+    top:50%;
+    transform:translate(0,-50%)
+}
+
+
+@media(max-width:991px)
+{
+    .sticky-sides-desktop{width:200px}
+} */

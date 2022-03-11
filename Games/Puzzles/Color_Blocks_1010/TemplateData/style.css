@@ -219,4 +219,5 @@ body {
     height: 128px;
     left: 50%;
     transform: translateX(-50%);
+    top: 0;
 }

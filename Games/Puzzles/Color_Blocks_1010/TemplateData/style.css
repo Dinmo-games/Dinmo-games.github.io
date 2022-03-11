@@ -118,7 +118,13 @@ body {
         transform: rotate(360deg);
     }
 }
-
+.start_container{
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
 .start-screen_background {
     display: block;
     position: fixed;

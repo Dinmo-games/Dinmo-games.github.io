@@ -1,6 +1,4 @@
 var $start_container = document.querySelectorAll(".start_container");
-document.getElementById("open_group").onclick = OpenGroup();
-document.getElementById("play_game").onclick = Hide_Start_Screen();
 
 function Hide_Start_Screen() {
     // document.getElementById("play_game").onclick = Hide_Start_Screen();
@@ -16,6 +14,6 @@ function Show_Start_Screen() {
 
 
 
-function OpenGroup() {
+function OpenGroup(gs) {
     gs.socials.joinCommunity();
 }

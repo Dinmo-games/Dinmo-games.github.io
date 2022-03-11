@@ -44,11 +44,12 @@
     });
 
     window.onGSInit = async (gs) => {
-
       await _unityAwaiter.ready;
+      Show_Start_Screen();
 
       gs.ads.showSticky();
 
+      var gameS = gs;
       window.GameScore = new GameScoreUnity(gs, unityI);
     };
 
@@ -199,12 +200,12 @@
   </script>
 
 
-  <div class="start_container" style="display: block;">
+  <div class="start_container" style="display: none;">
     <div class="start-screen_background"></div>
 
     <button class="play_button" onclick="Hide_Start_Screen()">ИГРАТЬ</button>
 
-    <button id="open_group" class="group_image_button"><img src="TemplateData/logo.png"></button>
+    <button class="group_image_button" onclick="OpenGroup(gameS)"><img src="TemplateData/logo.png"></button>
 
     <!-- <img src="/TemplateData/logo.png" alt="Group Logo" style="width:128px;height:128px;"> -->
     <!-- <div id="group_image_button"></div> -->

@@ -177,8 +177,8 @@ body {
 
 .group_image_button{
     display: block;
-    position: flex;
-    
+    position: fixed;
+
     height: 128px;
     width: 128px;
     left: 50%;

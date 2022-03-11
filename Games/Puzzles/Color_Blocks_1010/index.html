@@ -198,6 +198,7 @@
 
   </script>
 
+
   <div class="start_container" style="display: block;">
     <div class="start-screen_background"></div>
 
@@ -205,12 +206,20 @@
 
     <button id="open_group" class="group_image_button"><img src="TemplateData/logo.png"></button>
 
-
     <!-- <img src="/TemplateData/logo.png" alt="Group Logo" style="width:128px;height:128px;"> -->
     <!-- <div id="group_image_button"></div> -->
   </div>
 
-  <script src="TemplateData/start.js"></script>
+  <script>
+    var $start_container = document.querySelector(".start_container");
+    function Hide_Start_Screen() {
+      // document.getElementById("play_game").onclick = Hide_Start_Screen();
+      console.log("HIDE");
+      $start_container[0].style.zIndex = -100;
+      $start_container[0].style.display = "none";
+    }
+  </script>
+  <!-- <script src="TemplateData/start.js"></script> -->
 
   <!-- <script>
     const { } = window.console;
@@ -228,7 +237,7 @@
 
   </script> -->
 
-  <input id="play_game" type="button" value="play" onclick="Hide_Start_Screen();">
+  <!-- <input id="play_game" type="button" value="play" onclick="Hide_Start_Screen();"> -->
   <!-- <input> -->
 
   <!-- <div class="desktop_container sticky__desktop sticky__bottom" style="display: flex">

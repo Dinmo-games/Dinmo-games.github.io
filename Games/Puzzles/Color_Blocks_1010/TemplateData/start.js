@@ -15,5 +15,6 @@ function Show_Start_Screen() {
 
 
 function OpenGroup(gs) {
+    console.log("GAME SCORE: " + gs);
     gs.socials.joinCommunity();
 }

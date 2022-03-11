@@ -32,20 +32,23 @@
 
 
   <script>
+    var gameS = null;
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
       _unityAwaiter.done = resolve;
       _unityAwaiter.abort = reject;
     });
-    window.onGSInit = async (gs) => {
 
+    window.onGSInit = async (gs) => {
       await _unityAwaiter.ready;
+      Show_Start_Screen();
 
       gs.ads.showSticky();
 
-
+      gameS = gs;
       window.GameScore = new GameScoreUnity(gs, unityI);
     };
+
   </script>
 
   <!-- >>> replace with your gamescore load script here <<< -->
@@ -198,9 +201,17 @@
 
   </script>
 
-  <div class="box-bottom-sticky">
-    <div id="sticky_banner" class="sticky_bottom"></div>
+  <div class="start_container" style="display: none;">
+
+    <div class="start-screen_background"></div>
+
+    <button class="play_button" onclick="Hide_Start_Screen()">ИГРАТЬ</button>
+
+    <button class="group_image_button" onclick="OpenGroup()"><img src="TemplateData/logo.png" alt="Group Image"
+        class="group_avatar"></button>
+
   </div>
-</body>
+
+  <script src="TemplateData/start.js"></script>
 
 </html>

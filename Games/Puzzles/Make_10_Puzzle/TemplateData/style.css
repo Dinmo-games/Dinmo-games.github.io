@@ -118,22 +118,112 @@ body {
         transform: rotate(360deg);
     }
 }
-
-
-.sticky_bottom {
-    bottom: 0;
-}
-
-.box-bottom-sticky {
-    width: 100%;
-}
-
-.box-bottom-sticky #sticky_banner {
-    display: flex;
+.start_container{
+    display: block;
     position: fixed;
-
-    max-height: 90px;
-
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.start-screen_background {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: white;
     z-index: 100;
+}
+
+@font-face {
+        font-family: "Peace_Sans";
+        src: url("Fonts/Peace_Sans.otf") format("otf"),
+        url("Fonts/Peace_Sans.otf") format("otf");
+}
+.play_button {
+    position: fixed;
+    background-color: #46c54a;
+    color: white;
+  
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Peace_Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 180px;
+    height: 50px;
+
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
     overflow: hidden;
+
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border:none;
+    outline:none;
+    border-radius: 5px;
+
+    z-index: 150;
+  
+}
+
+.play_button:hover{
+    background-color: #4bdd50;
+ text-align: center;
+    width: 192px;
+}
+
+.play_button:active {
+	width: 160px;
+	background-color:#3f9441;
+    transition: all 0.2s;
+}
+
+
+
+.group_image_button{
+
+    display: block;
+    position: fixed;
+    background-color: white;
+
+    height: 128px;
+    width: 128px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 25%;
+    padding: 0px;
+
+    overflow: hidden;
+
+    border: none;
+    outline: none;
+    
+    border-radius: 5px;
+    
+    z-index: 150;
+
+}
+
+.group_image_button:hover{
+    outline:auto;
+    outline-color: #4bdd50;
+}
+.group_image_button:active{
+    outline:auto;
+    outline-color: #3f9441;
+    transition: all 0.2s;
+}
+
+.group_avatar{
+    display: block;
+    position: fixed;
+    width: 128px;
+    height: 128px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
 }

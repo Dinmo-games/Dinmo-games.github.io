@@ -201,7 +201,7 @@
   <div class="start_container" style="display: block;">
     <div class="start-screen_background"></div>
 
-    <button class="play_button play_game">ИГРАТЬ</button>
+    <button id="play_game" class="play_button ">ИГРАТЬ</button>
 
     <button id="open_group" class="group_image_button"><img src="TemplateData/logo.png"></button>
 
@@ -212,7 +212,7 @@
 
   <script src="TemplateData/start.js"></script>
 
-  <script>
+  <!-- <script>
     const { } = window.console;
     $('.log__send').click(() => {
       console.log($('#input-log').val());
@@ -226,9 +226,10 @@
     $("play_game").onclick = Hide_Start_Screen();
 
 
-  </script>
+  </script> -->
 
-
+  <input id="play_game" type="button" value="play" onclick="Hide_Start_Screen();">
+  <!-- <input> -->
 
   <!-- <div class="desktop_container sticky__desktop sticky__bottom" style="display: flex">
     <div id="rtb_bottom_desktop"></div>

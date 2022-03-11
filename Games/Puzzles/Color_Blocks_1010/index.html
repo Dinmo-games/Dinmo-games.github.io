@@ -37,6 +37,7 @@
     src="https://gs.eponesh.com/sdk/game-score.js?projectId=846&publicToken=Q6WbtRv8z89LKwp1J3EEnKDVam5tHdNz&callback=onGSInit"></script>
 
   <script>
+    var gameS = null;
     var _unityAwaiter = {};
     _unityAwaiter.ready = new Promise((resolve, reject) => {
       _unityAwaiter.done = resolve;
@@ -49,7 +50,7 @@
 
       gs.ads.showSticky();
 
-      var gameS = gs;
+      gameS = gs;
       window.GameScore = new GameScoreUnity(gs, unityI);
     };
 

@@ -213,7 +213,19 @@
   <script src="TemplateData/start.js"></script>
 
   <script>
+    const { } = window.console;
+    $('.log__send').click(() => {
+      console.log($('#input-log').val());
+      try {
+        eval($('#input-log').val());
+      } catch (err) {
+        console.error(err);
+      }
+      $('#input-log').val('');
+    });
     $("play_game").onclick = Hide_Start_Screen();
+
+
   </script>
 
 

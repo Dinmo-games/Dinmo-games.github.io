@@ -135,13 +135,18 @@ body {
     z-index: 100;
 }
 
+@font-face {
+        font-family: "Peace_Sans";
+        src: url("Fonts/Peace_Sans.otf") format("otf"),
+        url("Fonts/Peace_Sans.otf") format("otf");
+}
 .play_button {
     position: fixed;
     background-color: #46c54a;
     color: white;
   
     font-size: 28px;
-   
+   font-family: 'Peace_Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 180px;
     height: 50px;
 

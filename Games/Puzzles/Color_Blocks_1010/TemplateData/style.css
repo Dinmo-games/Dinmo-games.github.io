@@ -204,3 +204,8 @@ body {
 .group_image_button:hover{
     transform: scale(2px);
 }
+
+.group_avatar{
+    width: 128px;
+    height: 128px;
+}

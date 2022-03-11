@@ -171,6 +171,8 @@ body {
 
 .group_image_button{
     background-image:url('/TemplateData/logo.png');
+    height: 128px;
+    width: 128px;
     left: 50%;
     transform: translateX(-50%);
     bottom: 35%;

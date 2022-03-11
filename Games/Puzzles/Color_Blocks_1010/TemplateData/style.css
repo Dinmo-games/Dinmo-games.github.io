@@ -154,10 +154,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    z-index: 150;
     border:none;
     outline:none;
- 	border-radius: 5px;
+    border-radius: 5px;
+
+    z-index: 150;
   
 }
 
@@ -176,14 +177,30 @@ body {
 
 
 .group_image_button{
+
     display: block;
     position: fixed;
+    background-color: white;
 
-    height: 128px;
-    width: 128px;
+    height: 135px;
+    width: 135px;
+
     left: 50%;
     transform: translateX(-50%);
-    bottom: 35%;
 
+    bottom: 25%;
+    padding: 0px;
+
+    overflow: hidden;
+
+    border: none;
+    outline: none;
+    
+    border-radius: 5px;
+    
     z-index: 150;
+
+}
+.group_image_button:hover{
+    transform: scale(2px);
 }

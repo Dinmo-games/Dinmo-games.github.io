@@ -198,10 +198,10 @@
 
   </script>
 
-  <div class="start_container" style="display: flex;">
+  <div class="start_container" style="display: block;">
     <div class="start-screen_background"></div>
 
-    <button id="play_game" class="play_button">ИГРАТЬ</button>
+    <button class="play_button play_game">ИГРАТЬ</button>
 
     <button id="open_group" class="group_image_button"><img src="TemplateData/logo.png"></button>
 
@@ -210,7 +210,11 @@
     <!-- <div id="group_image_button"></div> -->
   </div>
 
+  <script src="TemplateData/start.js"></script>
 
+  <script>
+    $("play_game").onclick = Hide_Start_Screen();
+  </script>
 
 
 
@@ -222,7 +226,6 @@
     <div id="rtb_bottom_mobile"></div>
   </div>-->
 
-  <script src="TemplateData/start.js"></script>
 
 
 </body>

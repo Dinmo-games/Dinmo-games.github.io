@@ -182,8 +182,8 @@ body {
     position: fixed;
     background-color: white;
 
-    height: 135px;
-    width: 135px;
+    height: 128px;
+    width: 128px;
 
     left: 50%;
     transform: translateX(-50%);
@@ -201,11 +201,22 @@ body {
     z-index: 150;
 
 }
+
 .group_image_button:hover{
-    transform: scale(2px);
+    outline:auto;
+    outline-color: #4bdd50;
+}
+.group_image_button:active{
+    outline:auto;
+    outline-color: #3f9441;
+    transition: all 0.2s;
 }
 
 .group_avatar{
+    display: block;
+    position: fixed;
     width: 128px;
     height: 128px;
+    left: 50%;
+    transform: translateX(-50%);
 }

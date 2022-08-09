@@ -1,4 +1,4 @@
-#Updated June 28th, 2022
+#Updated July 21st, 2022
 #Appodeal
 appodeal.com, 166510, DIRECT
 #BidMachine
@@ -8,6 +8,8 @@ google.com, pub-4834065211996300, DIRECT, f08c47fec0942fa0
 #Notsy
 google.com, pub-4272971530084173, RESELLER, f08c47fec0942fa0
 rubiconproject.com, 23740, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 23740, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 17352, DIRECT, 0bfd66d529a55807
 uis.mobfox.com, 1729, DIRECT, 5529a3d1f59865be
 yahoo.com, 59663, RESELLER, e1a5b5b6e3255540
 instal.com, 5a59277b-91e8-4b5c-a4b5-ee9a7a6c0644, RESELLER
@@ -460,8 +462,8 @@ yahoo.com, 59781, RESELLER, e1a5b5b6e3255540
 e-planning.net,af5a107262468954, RESELLER,c1ba615865ed87b2
 contextweb.com ,562726,RESELLER,89ff185a4c4e857c
 #Unruly
-rhythmone.com, 3634565696, RESELLER, a670c89d4a324e47
-video.unrulymedia.com, 3634565696, RESELLER
+rhythmone.com, 3634565696, RESELLER, a670c89d4a324e47
+video.unrulymedia.com, 3634565696, RESELLER
 indexexchange.com, 182257, RESELLER
 appnexus.com, 6849, RESELLER
 rubiconproject.com, 15268, RESELLER
@@ -484,7 +486,7 @@ rhythmone.com, 3218195319, RESELLER, a670c89d4a324e47
 e-planning.net,a15ce31379a418ac,RESELLER,c1ba615865ed87b2
 betweendigital.com, 43843, RESELLER
 betweendigital.com, 43092, RESELLER
-onetag.com, 74ea58ae86fd4b0, DIRECT
+onetag.com, 74ea58ae86fd4b0, DIRECT
 admixer.co.kr, 1287, RESELLER
 admixer.net, 0072fb58-999b-445e-9a9b-3fc2a7194277, RESELLER
 admixer.net, de2ae535-59eb-4f0b-95e3-89f821933d47, RESELLER

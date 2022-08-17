@@ -39,7 +39,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 #unity-loading-bar {
     flex: 1 1 auto;
     display: flex;
@@ -47,15 +46,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 #unity-logo {
     text-align: center;
 }
-
 #unity-logo img {
     max-width: 80%;
 }
-
 #unity-progress-bar-empty {
     width: 30%;
     height: 15px;
@@ -64,21 +60,17 @@ body {
     border: 1px solid white;
     padding: 2px;
 }
-
 #unity-progress-bar-full {
     width: 0%;
     height: 100%;
     background: #00d274;
 }
-
 .light #unity-progress-bar-empty {
     border-color: black;
 }
-
 .light #unity-progress-bar-full {
     background: #00d274;
 }
-
 .spinner,
 .spinner:after {
     border-radius: 50%;
